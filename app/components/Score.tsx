@@ -3,6 +3,7 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure}
 import { Button } from "@nextui-org/button";
 import { useRouter } from "next/navigation";
 import { useCookies } from "next-client-cookies";
+import { useState } from "react";
 
 
 const Score = (params: any) => {
@@ -16,6 +17,8 @@ const Score = (params: any) => {
     console.log(genre);
 
     const highscore = Number(getHighscore());
+
+    const [login, setLogin] = useState(false);
 
 
     function getHighscore() {
@@ -43,16 +46,14 @@ const Score = (params: any) => {
                     <p> Play again or return home to choose a different game</p>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="danger" variant="light" onPress={() => window.location.reload()}>
+                    <Button color="primary" variant="light" onPress={() => window.location.reload()}>
                         Play Again
                     </Button>
-                    <Button color="danger" variant="light" onPress={() => router.push("/")}>
+                    <Button color="primary" variant="light" onPress={() => router.push("/")}>
                         Home
                     </Button>
-                    <Button color="primary" onPress={() => console.log("login")}>
-                        Login
-                    </Button>
                 </ModalFooter>
+                
             </ModalContent>
         </Modal>
         </>

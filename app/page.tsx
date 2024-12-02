@@ -14,8 +14,9 @@ const HIPHOP_ID = "37i9dQZF1DXb8wplbC2YhV";
 const POP_ID = "37i9dQZF1DX2L0iB23Enbq";
 const ROCK_ID = "37i9dQZF1DWXRqgorJj26U";
 
+// POPULATE MONGODB WITH API CALL
 
-const countrySongs = await getSongs(COUNTRY_ID);
+/*const countrySongs = await getSongs(COUNTRY_ID);
 const hipHopSongs = await getSongs(HIPHOP_ID);
 const popSongs = await getSongs(POP_ID);
 const rockSongs = await getSongs(ROCK_ID);
@@ -34,7 +35,7 @@ popSongs.forEach(song => {
 
 rockSongs.forEach(song => {
   storeSong(song, RockModel);
-});
+});*/
 
 export default function Home() {
 

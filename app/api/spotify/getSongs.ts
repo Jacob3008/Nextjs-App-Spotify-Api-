@@ -31,8 +31,8 @@ async function getSongs(id: String) {
 
   var songs = await fetch('https://api.spotify.com/v1/playlists/' + id + '/tracks' + '?market=US&limit=50', searchParameters)
   .then(response => response.json())
-  .then(data => {return data.items})
-
+  .then(data => {console.log(data);return data.items})
+  console.log('https://api.spotify.com/v1/playlists/' + id + '/tracks' + '?market=US&limit=50', searchParameters);
     songs.forEach((song: { track: { id: any; name: any; artists: { name: any; }[]; popularity: any; album: { images: { url: any; }[]; }; }; }) => {
         doc.push({
             _id: song.track.id,
