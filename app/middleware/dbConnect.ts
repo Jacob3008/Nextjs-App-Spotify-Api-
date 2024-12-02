@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const uri = "mongodb+srv://jsneuman2:Newsuw76@spotify.4cimw.mongodb.net/?retryWrites=true&w=majority&appName=Spotify";
+const uri = process.env.DATABASE_URI;
 
 const connectDB = async () => {
   try {

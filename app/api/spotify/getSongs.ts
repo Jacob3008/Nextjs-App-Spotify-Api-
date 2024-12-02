@@ -1,5 +1,5 @@
-const CLIENT_ID = "dd74b30c6865451c990838d1a54efa50";
-const CLIENT_SECRET = "b16f42324fca4906b9dbc5484b389e7a";
+const CLIENT_ID = process.env.API_CLIENT;
+const CLIENT_SECRET = process.env.API_SECRETY;
 
 
 
