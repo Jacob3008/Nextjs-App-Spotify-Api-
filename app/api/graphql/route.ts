@@ -4,7 +4,13 @@ import { NextRequest } from "next/server";
 import resolvers from "./schema/resolvers";
 import typeDefs from "./schema/typeDefs";
 import HipHop from "./schema/hip-hop";
-import HipHopModel from "../../mongoose/spotify/models/hip-hop"; 
+import {HipHopModel, CountryModel, PopModel, RockModel} from "../../mongoose/spotify/models"; 
+import Pop from "./schema/pop";
+import Rock from "./schema/rock";
+import Country from "./schema/country";
+import connectDB from "@/app/middleware/dbConnect";
+
+await connectDB();
 
 const server = new ApolloServer({
   resolvers,
@@ -18,6 +24,9 @@ const handler = startServerAndCreateNextHandler<NextRequest>(server, {
     res,
     dataSources: {
       hiphop: new HipHop({ modelOrCollection: HipHopModel }),
+      pop: new Pop({modelOrCollection: PopModel}),
+      rock: new Rock({modelOrCollection: RockModel}),
+      country: new Country({modelOrCollection: CountryModel})
     },
   }),
 });

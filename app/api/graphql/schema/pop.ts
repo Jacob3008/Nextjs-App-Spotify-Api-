@@ -1,12 +1,12 @@
-import { HipHopModel } from "../../../mongoose/spotify/models";
+import { PopModel } from "../../../mongoose/spotify/models";
 import { MongoDataSource } from "apollo-datasource-mongodb";
 import { SongInterface } from "../../../mongoose/spotify/interface";
 
-export default class HipHop extends MongoDataSource<SongInterface> {
+export default class Pop extends MongoDataSource<SongInterface> {
     // Function to fetch all songs
     async getAllSongs() {
       try {
-        return await HipHopModel.find();
+        return await PopModel.find();
       } catch (error) {
         throw new Error("Failed to fetch songs");
       }

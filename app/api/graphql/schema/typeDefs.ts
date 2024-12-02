@@ -9,6 +9,9 @@ const typeDefs = `#graphql
 
   type Query {
     hiphop: [Songs]
+    rock: [Songs]
+    pop: [Songs]
+    country: [Songs]
   }
 `;
 
