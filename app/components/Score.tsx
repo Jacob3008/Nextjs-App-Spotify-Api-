@@ -18,9 +18,6 @@ const Score = (params: any) => {
 
     const highscore = Number(getHighscore());
 
-    const [login, setLogin] = useState(false);
-
-
     function getHighscore() {
         try {
             return cookies.get(genre);
