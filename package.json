@@ -8,19 +8,40 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "packageManager": "npm@10.5.2",
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom",
+    "next": "$next"
+  },
   "dependencies": {
+    "@apollo/client": "^3.11.10",
+    "@apollo/server": "^4.11.2",
+    "@as-integrations/next": "^3.2.0",
+    "@nextui-org/button": "^2.0.38",
+    "@nextui-org/card": "^2.0.34",
+    "@nextui-org/image": "^2.0.32",
+    "@nextui-org/modal": "^2.0.41",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
+    "apollo-datasource-mongodb": "^0.6.0",
+    "framer-motion": "^11.11.17",
+    "graphql": "^16.9.0",
+    "mongoose": "^8.8.2",
+    "next": "15.0.3",
+    "next-client-cookies": "^2.0.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "react-hook-form": "^7.53.2"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "typescript": "^5"
   }
 }
