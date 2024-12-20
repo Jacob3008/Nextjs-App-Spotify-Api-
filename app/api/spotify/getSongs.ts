@@ -1,5 +1,5 @@
 const CLIENT_ID = process.env.API_CLIENT;
-const CLIENT_SECRET = process.env.API_SECRETY;
+const CLIENT_SECRET = process.env.API_SECRET;
 
 
 
